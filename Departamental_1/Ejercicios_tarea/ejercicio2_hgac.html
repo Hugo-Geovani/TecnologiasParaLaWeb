@@ -1,0 +1,208 @@
+<!DOCTYPE html> <!--Hecho por: Hugo Geovani Arroyo Castorena-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de listas en HTML</title>
+</head>
+<body>
+    <h1>Desordenadas</h1> <!--Listas Desordenadas -->
+    <section>
+        <h3>Desordenada simple con marcas</h3>
+        <ul>
+            <li>Linea de texto 1</li>
+            <li>Linea de texto 2</li>
+            <li>Linea de texto 3</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Desordenada simple sin marcas. Comienzo en margen izquierdo</h3>
+        <dl>
+            <dt>Linea de texto 1
+            <dt>Linea de texto 2
+            <dt>Linea de texto 3
+        </dl>
+    </section>
+    <section>
+        <h3>Desordenada simple sin marcas. Comienzo una posición a la derecha</h3>
+        <ul>
+            <dt>Linea de texto 1
+            <dt>Linea de texto 2
+            <dt>Linea de texto 3
+        </ul>
+    </section>
+    <section>
+        <h3>Desordenada simple con marcas. Comienzo una posición a la derecha</h3>
+        <ul>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+        </ul>
+    </section>
+    <section>
+        <h3>Desordenada simple sin marcas. Comienzo dos posiciones a la derecha</h3>
+        <ul>
+            <dd>Linea de texto 1
+            <dd>Linea de texto 2
+            <dd>Linea de texto 3
+        </ul>
+    </section>
+    <section>
+        <h3>Desordenada simple sin marcas. Comienzo tres posiciones a la derecha</h3>
+        <ul>
+            <ul>
+               <dd>Linea de texto 1
+               <dd>Linea de texto 2
+               <dd>Linea de texto 3
+            </ul>
+         </ul>
+    </section>
+    <section>
+        <h3>Desordenada simple con marcas. Comienzo dos posiciones a la derecha</h3>
+        <ul>
+            <ul TYPE=DISC>
+                <li>Linea de texto 1
+                <li>Linea de texto 2
+                <li>Linea de texto 3
+            </ul>
+        </ul>
+    </section>
+    <section>
+        <h3>Desordenada con 4 niveles sin marcas</h3>
+        <dl>
+            <dt>Linea de texto 1
+            <dt>Linea de texto 2
+            <dt>Linea de texto 3
+                <dl>
+                    <dt>Linea de texto 3.1
+                    <dt>Linea de texto 3.2
+                        <dl>
+                            <dt>Linea de texto 3.2.1
+                            <dt>Linea de texto 3.2.2
+                               <dl>
+                                   <dt>Linea de texto 3.2.2.1
+                                   <dt>Linea de texto 3.2.2.2
+                               </dl>
+                        </dl>
+                 </dl>
+             <dt>Linea 4 de texto       
+        </dl>
+    </section>
+    <section>
+        <h3>Desordenada con 4 niveles con marcas</h3>
+        <ul>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+                <ul>
+                    <li>Linea de texto 3.1
+                    <li>Linea de texto 3.2
+                        <ul>
+                            <li>Linea de texto 3.2.1
+                            <li>Linea de texto 3.2.2
+                               <ul>
+                                   <li>Linea de texto 3.2.2.1
+                                   <li>Linea de texto 3.2.2.2
+                               </ul>
+                        </ul>
+        
+                </ul>
+             <li>Linea 4 de texto       
+        </ul>
+    </section>
+    <h1>Ordenadas</h1> <!--Listas Desordenadas -->
+    <section>
+        <h3>Ordenada simple</h3>
+        <ol>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+        </ol>
+    </section>
+    <section>
+        <h3>Ordenada con 4 niveles, todos ordenado</h3>
+        <ol>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+               <ol>
+                   <li>Linea de texto 3.1
+                   <li>Linea de texto 3.2
+                       <ol>
+                           <li>Linea de texto 3.2.1
+                           <li>Linea de texto 3.2.2
+                               <ol>
+                                   <li>Linea de texto 3.2.2.1
+                                   <li>Linea de texto 3.2.2.2
+                               </ol>
+                       </ol>
+               </ol>
+            <li>Linea de texto 4
+        </ol>
+    </section>
+    <section>
+        <h3>Ordenada con 4 niveles, todos ordenados. Numeración romana en mayúsculas y minúsculas</h3>
+        <ol TYPE=I>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+               <ol TYPE=i>
+                   <li>Linea de texto 3.1
+                   <li>Linea de texto 3.2
+                       <ol TYPE=i>
+                           <li>Linea de texto 3.2.1
+                           <li>Linea de texto 3.2.2
+                               <ol TYPE=i>
+                                   <li>Linea de texto 3.2.2.1
+                                   <li>Linea de texto 3.2.2.2
+                               </ol>
+                       </ol>
+               </ol>
+            <LI>Linea de texto 4
+        </ol>
+    </section>
+    <section>
+        <h3>Ordenada con 4 niveles, 2 desordenados con marcas</h3>
+        <ol>
+            <li>Linea de texto 1
+            <li>Linea de texto 2
+            <li>Linea de texto 3
+               <ol>
+                   <li>Linea de texto 3.1
+                   <li>Linea de texto 3.2
+                       <ul TYPE=SQUARE>
+                           <li>Linea de texto 3.2.1
+                           <li>Linea de texto 3.2.2
+                               <ul TYPE=CIRCLE>
+                                   <li>Linea de texto 3.2.2.1
+                                   <li>Linea de texto 3.2.2.2
+                               </ul>
+                       </ul>
+               </ol>
+            <li>Linea de texto 4
+        </ol>
+    </section>
+    <section>
+        <h3>Ordenada con 4 niveles, 2 desordenados sin marcas Linea de texto 1</h3>
+        <ol>
+            <li>Linea de texto 1</li>
+            <li>Linea de texto 2</li>
+            <li>Linea de texto 3</li>
+                <ol>
+                    <li>Linea de texto 3.1</li>
+                    <li>Linea de texto 3.2</li>
+                        <dl>
+                            <dd>Linea de texto 3.2.1
+                            <dd>Linea de texto 3.2.2
+                                <dl>
+                                    <dd>Linea de texto 3.2.2.1
+                                    <dd>Linea de texto 3.2.2.2
+                                </dl>
+                        </dl>
+                </ol>
+            <li>Linea de texto 4</li>
+        </ol>
+    </section>
+</body>
+</html>
