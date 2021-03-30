@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!--Hecho por: Hugo Geovani Arroyo Castorena-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 4</title>
+</head>
+<body>
+    <!--Enlace a la pagina principal-->
+    <a href="examen2_hgac.html" title="Enlace a la pagina principal">Enlace a la pagina principal</a>
+        
+    <main>
+        <section>            
+            <form action="guarda.php"method="POST">
+                <fieldset>    
+                    <table align="center">
+                        <h1 align="center">CATÁLOGO DE ARTE</h1>
+                        <p><b>Introduce los términos de búsqueda:</b></p>
+                            <tr>
+                                <td colspan="2" align="center"><b>OBRA</b></td>
+                                <td align="center"><b>TIPO</b></td>
+                                <td align="center"><b>DISPONIBILIDAD</b></td>
+                                <td align="center"><dd><b>ESTILO</b></td></dd>
+                            </tr>
+                            <tr>
+                                <td><label for="titulo">Título:</label></td>
+                                <td><input type="text" id="titulo" name="titulo" size="10" maxlength="5"></td>
+                                <td><dd><input type="checkbox" id="esc" name="esc" value=1><label>Escultura</label></dd></td>
+                                <td><dd><input type="radio" id="museo" name="museo" value=1><label>Museo/Acceso público</label></dd></td>
+                                <td><dd>
+                                    <select id="estilo" name="estilo">
+                                    <option value="1">Clásico</option>
+                                    <option value="2">Vintage</option>
+                                    </select>
+                                </dd></td>
+                            </tr>
+                            <tr>
+                                <td><label for="autor">Autor:</label></td>
+                                <td><input type="text" id="autor" name="autor" size="10" maxlength="5"></td>
+                                <td><dd><input type="checkbox" id="arq" name="arq" value=2><label>Arquitectura</label></dd></td>
+                                <td><dd><input type="radio" id="col" name="col" value=2><label>Colección privada</label></dd></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="center"><input type="checkbox" id="pin" name="pin" value=1><label>Pintura</label></td>
+                            </tr>
+                    </table>
+                    <p><b>Haganos saber sus sugerencias:</b></p>
+                    <textarea></textarea>
+                            <tr align="center">
+                                <td><input type="submit" id="buscar" name="buscar" value="Buscar"></td>
+                            </tr>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
