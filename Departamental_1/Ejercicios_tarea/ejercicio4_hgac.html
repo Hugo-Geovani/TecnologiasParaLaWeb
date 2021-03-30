@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!--Hecho por: Hugo Geovani Arroyo Castorena-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <section>            
+            <form action="guarda.php"method="POST">
+                <fieldset>
+                <legend>Informacion Personal</legend>
+
+                <table align="center">
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><input type="text" id="nombre" name="nombre"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="p_apellido">Primer apellido:</label></td>
+                        <td><input type="text" id="p_apellido" name="p_apellido"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="s_apellido">Segundo apellido:</label></td>
+                        <td><input type="text" id="s_apellido" name="s_apellido"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="l_nacimiento">Lugar de nacimiento :</label></td>
+                        <td><input type="text" id="l_nacimiento" name="l_nacimiento"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="nacionalidad">Nacionalidad:</label></td>
+                        <td><input type="text" id="nacionalidad" name="nacionalidad"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Estado civil</label></td>
+                        <td>
+                            <select id="estado_civil" name="estado_civil">
+                                <option value="1">Soltero (a) </option>
+                                <option value="2">Casado (a) </option>
+                                <option value="3">Divorciado (a) </option>
+                                <option value="4">Separado (a) </option>
+                                <option value="5">Union libre (a) </option>
+                                <option value="6">Viudo (a) </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Sexo:</label></td>
+                        <td>
+                            <input type="radio" id="sexo" name="sexo" value=1><label>Masculino</label>
+                            <input type="radio" id="sexo" name="sexo" value=2><label>Femenino</label>
+                        </td>
+                     </tr>
+                </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informacion Escolar</legend>
+    
+                    <table align="center">
+                        <tr>
+                            <td><label for="institucion">Institucion:</label></td>
+                            <td><input type="text" id="institucion" name="institucion"></td>
+                        </tr>
+    
+                        <tr>
+                            <td><label for="plantel">Plantel:</label></td>
+                            <td><input type="text" id="plantel" name="plantel"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Carrera:</label></td>
+                            <td>
+                                <select id="carrera" name="carrera">
+                                    <option value="1">Ingenieria en Sistemas Computacionales</option>
+                                    <option value="2">Ingenieria en Alimentos</option>
+                                    <option value="3">Ingenieria Metalurgica</option>
+                                    <option value="4">Ingenieria Mecatronica</option>
+                                    <option value="5">Ingenieria Ambiental</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Grado Academico:</label></td>
+                            <td>
+                                <select id="grado" name="grado">
+                                    <option value="1">Doctorado</option>
+                                    <option value="2">Maestria</option>
+                                    <option value="3">Especialidad</option>
+                                    <option value="4">Licenciatura</option>
+                                    <option value="5">Media Superior</option>
+    
+                                </select>
+                                <input type="radio" id="status" name="status" value=1><label>Activo</label>
+                                <input type="radio" id="status" name="status" value=2><label>Terminado</label>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td><label for="promedio">Promedio:</label></td>
+                            <td><input type="number" id="experiencia" name="experiencia"></td>     
+                        </tr>
+                    </table>
+                    </fieldset>
+                <table align="center">
+                    <tr>
+                        <td><input type="submit" id="enviar" name="enviar" value="Enviar formulario"></td>
+                        <td><input type="reset" id="limpiar" name="limpiar" value="Limpiar formulario"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
