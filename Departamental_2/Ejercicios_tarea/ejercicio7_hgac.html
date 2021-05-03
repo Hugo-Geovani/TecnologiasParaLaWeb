@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="en">
-<!--Hugo Geovani-->
+<!--Hugo Geovani Arroyo-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ejercicio6_Calculadora</title>
+    <title>Ejercicio7_Conversor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="../../Plantilla/srtdash/assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="../../Plantilla/srtdash/assets/css/bootstrap.min.css">
@@ -47,10 +47,11 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li><a href="ejercicio5_hgac.html"><i class="ti-map-alt"></i> <span>Calculadora Básica</span></a></li>
-                            <li class="active"><a href="invoice.html"><i class="ti-receipt"></i> <span>Calculadora Cientifica</span></a></li>
-                            <li><a href="ejercicio7_hgac.html"><i class="ti-map-alt"></i> <span>Conversor de Unidades</span></a></li>
+                            <li><a href="ejercicio6_hgac.html"><i class="ti-map-alt"></i> <span>Calculadora Cientifica</span></a></li>
+                            <li class="active"><a href="invoice.html"><i class="ti-receipt"></i> <span>Conversor de Unidades</span></a></li>
                             <li><a href="ejercicio8_hgac.html"><i class="ti-map-alt"></i> <span>CRUD Denominacion</span></a></li>
-                            <li><a href="maps.html"><i class="ti-map-alt"></i> <span>Opcion 5</span></a></li>
+                            <li><a href="#"><i class="ti-map-alt"></i> <span>Opcion 4</span></a></li>
+                            <li><a href="#"><i class="ti-map-alt"></i> <span>Opcion 5</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -84,7 +85,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Calculadora</h4>
+                            <h4 class="page-title pull-left">Conversor de unidades</h4>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
@@ -96,54 +97,167 @@
                 </div>
             </div>
             
-            <div class="col-lg-6 mt-5">
+            <!-- tab start -->
+            <div class="col-lg-8 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <!--Display de mi calculadora -->
-                        <div class="form-group">
-                            <input style="text-align: right;" class="form-control" type="text" value="0" id="display" readonly>
-                        </div>
-                        <div class="single-table">
-                            <div class="table-responsive">
-                                <table class="table text-center">
-                                    <tbody>
-                                        <tr>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="factorial();">X!</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito('(');">(</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito(')');">)</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="calcularPorcentaje();">%</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="limpiarPantalla();">AC</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="calcularLn();">ln</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(7);">7</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(8);">8</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(9);">9</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito('/');">÷</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="calcularLog();">log</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(4);">4</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(5);">5</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(6);">6</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito('*');">x</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="calcularRaiz();">√</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(1);">1</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(2);">2</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(3);">3</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito('-');">-</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="calcularExponente();">xy</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito(0);">0</button></td>
-                                            <td><button type="button" class="btn btn-block btn-light" onclick="ingresarDigito('.');">.</button></td>
-                                            <td><button type="button" class="btn btn-block btn-primary" onclick="teclaIgual();">=</button></td>
-                                            <td><button type="button" class="btn btn-block btn-success" onclick="ingresarDigito('+');">+</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Longitud</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Temperatura</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Masa</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_longitud_1" onchange="cambiarValor();" onkeypress="cambiarValor();">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_longitud_2" onchange="cambiarValor();" onkeypress="cambiarValor();">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_longitud_1" onchange="cambiarValor();">
+                                                <option value="kilometro">Kilómetro</a>
+                                                <option value="metro">Metro</a>
+                                                <option value="centimetro">Centímetro</a>
+                                                <option value="milimetro">Milímetro</a>
+                                                <option value="micrometro">Micrómetro</a>
+                                                <option value="nanometro">Nanómetro</a>
+                                                <option value="milla">Milla</a>
+                                                <option value="yarda">Yarda</a>
+                                                <option value="pie" >Pie</a>
+                                                <option value="pulgada">Pulgada</a>
+                                                <option value="milla_nautica">Milla Náutica</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_longitud_2" onchange="cambiarValor();">
+                                                <option value="kilometro">Kilómetro</a>
+                                                <option value="metro">Metro</a>
+                                                <option value="centimetro">Centímetro</a>
+                                                <option value="milimetro">Milímetro</a>
+                                                <option value="micrometro">Micrómetro</a>
+                                                <option value="nanometro">Nanómetro</a>
+                                                <option value="milla">Milla</a>
+                                                <option value="yarda">Yarda</a>
+                                                <option value="pie" >Pie</a>
+                                                <option value="pulgada">Pulgada</a>
+                                                <option value="milla_nautica">Milla Náutica</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-success" role="alert">
+                                            <strong>Formula</strong> 
+                                            <p id="parrafo">Esta es la formula</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+     
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_temp_1" onchange="cambiarValorT();" onkeypress="cambiarValorT();">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_temp_2" onchange="cambiarValorT();" onkeypress="cambiarValorT();">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_temp_1" onchange="cambiarValorT();">
+                                                <option value="celcius">Celcius</a>
+                                                <option value="fahrenheit">Fahrenheit</a>
+                                                <option value="kelvin">Kelvin</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_temp_2" onchange="cambiarValorT();">
+                                                <option value="celcius">Celcius</a>
+                                                <option value="fahrenheit">Fahrenheit</a>
+                                                <option value="kelvin">Kelvin</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-success" role="alert">
+                                            <strong>Formula</strong> 
+                                            <p id="parrafot">Esta es la formula</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_masa_1" onchange="cambiarValorM();" onkeypress="cambiarValorM();">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" type="number" value="0" id="valor_masa_2" onchange="cambiarValorM();" onkeypress="cambiarValorM();">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_masa_1" onchange="cambiarValorM();">
+                                                <option value="kilogramo">Kilogramo</a>
+                                                <option value="gramo">Gramo</a>
+                                                <option value="miligramo">Miligramo</a>
+                                                <option value="libra">Libra</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="select_masa_2" onchange="cambiarValorM();">
+                                                <option value="kilogramo">Kilogramo</a>
+                                                <option value="gramo">Gramo</a>
+                                                <option value="miligramo">Miligramo</a>
+                                                <option value="libra">Libra</a>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="alert alert-success" role="alert">
+                                            <strong>Formula</strong> 
+                                            <p id="parrafom">Esta es la formula.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,7 +466,7 @@
     <script src="../../Plantilla/srtdash/assets/js/plugins.js"></script>
     <script src="../../Plantilla/srtdash/assets/js/scripts.js"></script>
 
-    <script src="../js/calculadoraCientifica.js"></script>
+    <script src="../js/conversor.js"></script>
 </body>
 
 </html>
