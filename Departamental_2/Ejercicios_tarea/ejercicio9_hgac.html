@@ -134,7 +134,7 @@
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody><!---
                                             <tr>
                                                 <td >Sistemas Computacionales</td>
                                                 <td>Luis Humberto Ruiz</td>
@@ -170,15 +170,24 @@
                                                 <td>
                                                     <button type="button" class="btn btn-warning mb-1 col-md-12"data-toggle="modal" data-target=".modal-validar"><i class="ti-view-list"></i><i class="ti-check"></i></button>
                                                 </td>
-                                            </tr>
+                                            </tr>-->
                                         </tbody>
+                                        <footer class="bg-light text-capitalize">
+                                            <tr>
+                                                <th>Programa Académico</th>
+                                                <th>Nombre</th>
+                                                <th>Actividad</th>
+                                                <th>Horas</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </footer>
                                     </table>
 
-                                    <div class="modal fade modal-validar">
+                                    <div class="modal fade modal-validar" id="modal-validar">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <p>Validar constancia de <b>Luis López Aguilar</b></p>
+                                                    <p>Validar constancia de <b><span id="nombre_validar"></span></b></p>
                                                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -186,7 +195,7 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label><b>Nombre de la actividad</b></label>
-                                                                <input class="form-control" type="text" placeholder="Curso de Android">
+                                                                <input class="form-control" id="actividad_validar" type="text" placeholder="">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,23 +204,32 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label><b>Fecha de inicio</b></label>
-                                                                <input class="form-control" type="text" placeholder="23-05-2021">
+                                                                <input class="form-control" id="fecha_inicio_validar" type="date" placeholder="">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label><b>Fecha de termino</b></label>
-                                                                <input class="form-control" type="text" placeholder="23-06-2021">
+                                                                <input class="form-control" id="fecha_fin_validar" type="date" placeholder="">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label><b>Horas</b></label>
-                                                                <input class="form-control" type="text" placeholder="20">
+                                                                <input class="form-control" id="horas_validar" type="number" placeholder="">
                                                             </div>
                                                         </div>
                                                     </div>
 
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label><b>Observaciones</b></label>
+                                                                <textarea class="form-control" id="observaciones_validar" rows="2" placeholder=""></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
                                                     <div class="row justify-content-between">
                                                         <div class="col-md-4">
                                                             <div class="form-group">
@@ -222,8 +240,10 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <label><b>¿Constancia válida?</b></label>
-                                                                <select class="form-control">
-                                                                    <option value="1">Seleccionar</a>
+                                                                <select class="form-control" id="constancia_valida">
+                                                                    <option selected="selected">Seleccionar</option>
+                                                                    <option value="1">Si</option>
+                                                                    <option value="0">No</option>
                                                                 </select>                                        
                                                             </div>
                                                         </div>
@@ -234,7 +254,10 @@
                                                             <div class="form-group">
                                                                 <label><b>Denominacion</b></label>
                                                                 <select class="form-control">
-                                                                    <option value="1">Seleccionar</a>
+                                                                    <option selected="selected">Seleccionar</option>
+                                                                    <option>Inquietudes vocacionales propias</option>
+                                                                    <option>Enfasis en la profesion</option>
+                                                                    <option>Complementarias a la formacion</option>
                                                                 </select>                                        
                                                             </div>
                                                         </div>
@@ -242,7 +265,10 @@
                                                             <div class="form-group">
                                                                 <label><b>Modalidad</b></label>
                                                                 <select class="form-control">
-                                                                    <option value="1">Seleccionar</a>
+                                                                    <option selected="selected">Seleccionar</option>
+                                                                    <option>Docencia</option>
+                                                                    <option>Trabajo de campo supervisado</option>
+                                                                    <option>Indepenientes</option>
                                                                 </select>                                        
                                                             </div>
                                                         </div>
@@ -252,7 +278,7 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label><b>Observaciones</b></label>
-                                                                <textarea class="form-control" rows="3" placeholder="En caso de que la constancia no sea válida, especifique el motivo"></textarea>
+                                                                <textarea class="form-control"  id="observaciones_encargado" rows="2" placeholder="En caso de que la constancia no sea válida, especifique el motivo"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -260,7 +286,7 @@
                                                 </div>
                                                 <div class="modal-footer justify-content-between">
                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <button type="button" class="btn btn-success">Guardar</button>
+                                                    <button type="button" class="btn btn-success" onclick="accionValidarConstancia();">Guardar</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -511,7 +537,17 @@
     <script src="../../Plantilla/srtdash/assets/js/plugins.js"></script>
     <script src="../../Plantilla/srtdash/assets/js/scripts.js"></script>
 
-    <script src="../js/crud-denominacion.js"></script>
+    <script src="../js/validar-constancias.js"></script>
+
+    <script>
+        /*$( document ).ready(function(){
+            actionRead();
+        });*/
+        $(function(){
+            actionRead();
+        });
+    </script>
+
 </body>
 
 </html>

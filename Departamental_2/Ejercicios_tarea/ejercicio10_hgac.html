@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 10 | CSS</title>
+    <link rel="stylesheet" href="../css/ejercicio10_hgac.css">
+    <script src="https://kit.fontawesome.com/8a8a9aae0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="#" class="boton boton-default">Default</a>
+    <a href="#" class="boton boton-primario">Primary</a>
+    <a href="#" class="boton boton-secundario">Secondary</a>
+    <a href="#" class="boton boton-success" onclick="mostrarSuccess();">Success</a>
+    <a href="#" class="boton boton-info" onclick="mostrarInfo();">Info</a>
+    <a href="#" class="boton boton-danger" onclick="mostrarDanger();">Danger</a>
+    <a href="#" class="boton boton-warning" onclick="mostrarWarning();">Warning</a>
+
+    <div class="div-general div-danger" id="div-danger">
+        <h4><i class="fas fa-exclamation-triangle"></i> Alert!</h4>
+        <p>Danger alert preview. This alert is dismissable</p>
+    </div> 
+    <div class="div-general div-info" id="div-info">
+        <h4><i class="fas fa-info-circle"></i> Alert!</h4>
+        <p>Info alert preview. This alert is dismissable</p>
+    </div>
+    <div class="div-general div-warning" id="div-warning">
+        <h4><i class="fas fa-skull-crossbones"></i> Alert!</h4>
+        <p>Warning alert preview. This alert is dismissable</p>
+    </div>
+    <div class="div-general div-success" id="div-success">
+        <h4><i class="fas fa-check-circle"></i> Alert!</h4>
+        <p>Success alert preview. This alert is dismissable. </p>
+    </div>
+
+    <!-- jquery latest version -->
+    <script src="../../Plantilla/srtdash/assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../js/ejercicio10.js"></script>
+    <script>
+        $( document ).ready(function(){
+            //alert("Hola mundo desde cero");
+        });
+    </script>
+</body>
+</html>
+
