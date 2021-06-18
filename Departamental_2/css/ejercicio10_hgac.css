@@ -1,0 +1,115 @@
+/* Para todas las etiquetas*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 10px;
+}
+.boton{
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.boton-primario{
+    background-color: rgb(58, 117, 253);
+    border-color: rgb(58,117, 253);
+}
+.boton-secundario{
+    background-color: rgb(109, 117, 125);
+}
+.boton-default{
+    background-color: rgb(248, 249, 250);
+    border-color: rgb(221, 221, 221);
+    color: #000000;
+}
+.boton-success{
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.boton-info{
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.boton-danger{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.boton-warning{
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+/* */
+.boton-primario:hover{
+    background-color: rgb(48, 100, 215);
+}
+.boton-secundario:hover{
+    background-color: rgba(109, 117, 125, 0.8);
+}
+.boton-default:hover{
+    background-color: rgba(248, 249, 250, 0.8);
+}
+.boton-success:hover{
+    background-color: #28a745bb;
+}
+.boton-info:hover{
+    background-color: #17a2b8bb;
+}
+.boton-danger:hover{
+    background-color: #dc3545bb;
+}
+.boton-warning:hover{
+    background-color: #ffc107bb;
+}
+
+h4{
+    margin-bottom: 10px;
+}
+/*Mensajes*/
+.div-general{
+    display: none;
+    width: 50%;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.div-danger{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.div-info{
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+.div-warning{
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.div-success{
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Variante de fondo blanco */
+.div-rojo{
+    width: 50px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #beb3be;
+    color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    border-left-color: #dc3545;
+    border-left-width: 5px;
+}
